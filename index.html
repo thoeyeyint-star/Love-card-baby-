@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For You ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#fff3f7;font-family:system-ui,-apple-system,"Noto Sans Myanmar",sans-serif;color:#6b4050}
+.card{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.box{width:min(420px,100%);background:white;border-radius:28px;padding:28px 22px;text-align:center;box-shadow:0 12px 40px #d8a9bb55}
+h1{font-size:25px;margin:5px 0 18px} p{font-size:18px;line-height:1.8}
+button{border:0;border-radius:999px;padding:13px 24px;margin:8px;background:#f28bb0;color:white;font-size:16px}
+img{width:100%;border-radius:20px;margin:12px 0;display:none}
+.page{display:none}.page.active{display:block}
+.heart{font-size:46px}
+.small{font-size:14px;color:#a27b88}
+</style>
+</head>
+<body>
+<div class="card"><div class="box">
+  <div id="p1" class="page active">
+    <div class="heart">🌸🥺</div>
+    <h1>မင်းကိုသတိရတယ်...</h1>
+    <p>ငါမင်းကိုသတိရတယ်<br>ပြန်လာမလားဟင် 🌸🥺</p>
+    <button onclick="show(2)">နောက်တစ်ခု 💗</button>
+  </div>
+  <div id="p2" class="page">
+    <h1>မင်းအတွက် ပုံလေးပါ ❤️</h1>
+    <img src="photo.jpg" style="display:block">
+    <button onclick="show(3)">နောက်တစ်ခု 🥺</button>
+  </div>
+  <div id="p3" class="page">
+    <div class="heart">🥺❤️</div>
+    <h1>တစ်သက်လုံးချစ်ကြမယ်တာအယ် 🥺❤</h1>
+    <p>Until I Found You 🎵</p>
+    <p class="small">With love ❤️</p>
+  </div>
+</div></div>
+<script>
+function show(n){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.getElementById('p'+n).classList.add('active');
+}
+</script>
+</body>
+</html>
